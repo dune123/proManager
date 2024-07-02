@@ -12,7 +12,7 @@ const TaskShare = () => {
 
   const getTask = async () => {
     try {
-        const res = await axios.get(`http://localhost:3000/api/task/getTaskWithoutId/${taskId}`);
+        const res = await axios.get(`https://promanagerbakend-2.onrender.com/api/task/getTaskWithoutId/${taskId}`);
 
       if (res.status === 201) {
         console.log(res.data)

@@ -29,7 +29,7 @@ const Login = ({ setLoginstatus }) => {
         setFieldError("this field is required");
     }
     try {
-      const res = await axios.post("http://localhost:3000/api/user/login", formvalues);
+      const res = await axios.post("https://promanagerbakend-2.onrender.com/api/user/login", formvalues);
       if (res.status === 201) {
         navigate("/dashboard");
         toast.success("user logged in successfully");

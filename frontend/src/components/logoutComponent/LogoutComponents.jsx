@@ -11,7 +11,7 @@ const LogoutComponents = ({setLogoutComp}) => {
 
     const logout=async()=>{
         try {
-            const res=await axios.post("http://localhost:3000/api/user/logout",{username},{
+            const res=await axios.post("https://promanagerbakend-2.onrender.com/api/user/logout",{username},{
                 headers: {
                     Authorization: `Bearer ${token}`,
                   },

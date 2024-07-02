@@ -14,7 +14,7 @@ const Analytics = () => {
 
   const getStatusandPriority=async()=>{
     try {
-      const res=await axios.get("http://localhost:3000/api/task/getanalytics",{
+      const res=await axios.get("https://promanagerbakend-2.onrender.com/api/task/getanalytics",{
         headers: {
           Authorization: `Bearer ${token}`,
         },

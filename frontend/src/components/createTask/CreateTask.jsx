@@ -13,7 +13,7 @@ const createTask = ({ setAddTask }) => {
   const token=window.localStorage.getItem("token");
   const userId=window.localStorage.getItem("userId");
   const email=window.localStorage.getItem("email");
-  const [duedate, setDuedate] = useState(null);
+  const [checkedCount, setCheckedCount] = useState(null);
   const [filter, setFilter] = useState("This Week");
   const [boardUser,setBoardUser] = useState([]);
   const [selectedEmail, setSelectedEmail] = useState(email);
@@ -22,13 +22,13 @@ const createTask = ({ setAddTask }) => {
     title: "",
     priority: "",
     assignTo: selectedEmail,
-    checklist: [{checked:"",description:""}],
+    checklist: [{checked:false,description:""}],
     dueDate: null,
   });
 
   const getBoardUser=async()=>{
     try {
-        const res=await axios.get("http://localhost:3000/api/user/getBoardUser",{
+        const res=await axios.get("https://promanagerbakend-2.onrender.com/api/user/getBoardUser",{
             headers: {
           Authorization: `Bearer ${token}`,
         }
@@ -95,10 +95,10 @@ const createTask = ({ setAddTask }) => {
     checklist: newChecklist,
   });
 };
-
+  console.log(formValues)
  const addTask=async()=>{
     try {
-      const res=await axios.post("http://localhost:3000/api/task/createTask",formValues,{
+      const res=await axios.post("https://promanagerbakend-2.onrender.com/api/task/createTask",formValues,{
         headers: {
           Authorization: `Bearer ${token}`,
         }
@@ -120,6 +120,12 @@ const createTask = ({ setAddTask }) => {
     X
   </i>);
 
+
+  useEffect(()=>{
+    // Calculate the number of checked checklist items
+  setCheckedCount(formValues.checklist.filter(item => item.checked).length)
+  
+  },[formValues.checklist])
   return (
     <div className={styles.superContainer}>
       <ToastContainer
@@ -166,10 +172,11 @@ const createTask = ({ setAddTask }) => {
       {/*Dropdown check */}
             <p>Assign To</p>
             <Dropdown boardUser={boardUser} setSelectedEmail={setSelectedEmail}
-              selectedEmail={selectedEmail}
+              selectedEmail={selectedEmail} setformValues={setformValues}
             />
       </div>  
         <div className={styles.checklist}>
+        <p>Checklist ({checkedCount}/{formValues.checklist.length})<span style={{color:"red"}}>*</span></p>
         <div className={styles.fullChecklist}>
         {formValues.checklist.map((data, index) => (
             <div className={styles.eachChecklist} key={index}>

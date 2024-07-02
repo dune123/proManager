@@ -33,7 +33,7 @@ const Setting = () => {
 
   const updatePassword = async () => {
     try {
-      const res = await axios.post("http://localhost:3000/api/user/changePassword", formValues, {
+      const res = await axios.post("https://promanagerbakend-2.onrender.com/api/user/changePassword", formValues, {
         headers: {
           Authorization: `Bearer ${token}`,
         },
@@ -61,7 +61,6 @@ const Setting = () => {
     </i>
   );
 
-  console.log(formValues)
   return (
     <div className={styles.container}>
     <ToastContainer

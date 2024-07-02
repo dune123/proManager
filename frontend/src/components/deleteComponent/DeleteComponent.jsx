@@ -11,7 +11,7 @@ const DeleteComponent = ({setDeleteComp,deleteTaskId}) => {
     const deleteTask = async () => {
         try {
           const res = await axios.post(
-            "http://localhost:3000/api/task/deleteTask",
+            "https://promanagerbakend-2.onrender.com/api/task/deleteTask",
             { taskId },
             {
               headers: {

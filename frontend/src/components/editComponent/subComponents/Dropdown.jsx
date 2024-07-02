@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import styles from './Dropdown.module.css'; 
 import { FaAngleDown } from "react-icons/fa6";
 
-const Dropdown = ({boardUser,setSelectedEmail,selectedEmail}) => {
+const Dropdown = ({boardUser,setSelectedEmail,selectedEmail,setTask}) => {
   const [isOpen, setIsOpen] = useState(false);
 
   const toggleDropdown = () => {
@@ -11,6 +11,10 @@ const Dropdown = ({boardUser,setSelectedEmail,selectedEmail}) => {
 
   const handleSelect = (email) => {
     setSelectedEmail(email);
+    setTask((prevFormValues) => ({
+      ...prevFormValues,
+      assigned: email
+    }));
     setIsOpen(false);
   };
 

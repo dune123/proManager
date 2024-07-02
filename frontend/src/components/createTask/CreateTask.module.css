@@ -20,8 +20,8 @@
 }
 
 .container{
-    width:41.5vw;
-    height:64vh;
+    width:42.5vw;
+    height:65vh;
     background-color: white;
     display: flex;
     flex-direction: column;
@@ -55,6 +55,7 @@
     display: flex;
     align-items: center;
     gap:2vw;
+    cursor: pointer;
 }
 
 .selectPriority .rightside div{

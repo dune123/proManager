@@ -83,7 +83,7 @@ const Board = () => {
   const getAllTask = async () => {
     try {
       const res = await axios.get(
-        `http://localhost:3000/api/task/getTask/${filter}`,
+        `https://promanagerbakend-2.onrender.com/api/task/getTask/${filter}`,
         {
           headers: {
             Authorization: `Bearer ${token}`,
@@ -136,7 +136,7 @@ const Board = () => {
   const changeStatus = async (taskId, newStatus) => {
     try {
       const res = await axios.post(
-        "http://localhost:3000/api/task/changeStatus",
+        "https://promanagerbakend-2.onrender.com/api/task/changeStatus",
         {
           taskId,
           newStatus,
@@ -163,7 +163,7 @@ const Board = () => {
   const changeChecked = async (taskId, checklistItemId, isChecked) => {
     try {
       const res = await axios.post(
-        `http://localhost:3000/api/task/changeChecked/${taskId}`,
+        `https://promanagerbakend-2.onrender.com/api/task/changeChecked/${taskId}`,
         { checklistItemId, isChecked },
         {
           headers: {
@@ -230,7 +230,7 @@ const Board = () => {
       </div>
       <div className={styles.BottomCont}>
         <div className={styles.BottomTopCont}>
-          <div className={styles.ChecklistCnt}>Checklist</div>
+          <div className={styles.ChecklistCnt}>Checklist({task.checklist.filter(item => item.checked).length}/{task.checklist.length})</div>
           <button onClick={() => toggleChecklist(task._id)}>
             {checklistVisibility[task._id] ? (
               <IoIosArrowDown />
@@ -310,8 +310,10 @@ const Board = () => {
   );
 
   const shareTask = async (taskId) => {
-    const link = `http://localhost:5173/taskUnique/${taskId}`;
-    navigator.clipboard.writeText(link);
+    const protocol = window.location.protocol;
+    const host = window.location.host;
+    const link=`${protocol}//${host}/taskUnique/${taskId}`
+    navigator.clipboard.writeText(link)
     toast.success("Link Copied on clipboard");
   };
   return (

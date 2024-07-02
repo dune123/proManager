@@ -3,7 +3,7 @@ import styles from "./editComponent.module.css";
 import { GoDotFill } from "react-icons/go";
 import axios from "axios";
 import DatePicker from "react-datepicker";
-import Dropdown from "../createTask/subComponents/Dropdown";
+import Dropdown from "../editComponent/subComponents/Dropdown";
 import "react-datepicker/dist/react-datepicker.css";
 import { MdDelete } from "react-icons/md";
 import { ToastContainer, toast } from "react-toastify";
@@ -19,7 +19,7 @@ const EditComponents = ({ editTask,setIseditable }) => {
 
   const getTask = async () => {
     try {
-        const res = await axios.get(`http://localhost:3000/api/task/getTaskWithoutId/${editTask}`);
+        const res = await axios.get(`https://promanagerbakend-2.onrender.com/api/task/getTaskWithoutId/${editTask}`);
 
       if (res.status === 201) {
         console.log(res.data)
@@ -35,7 +35,7 @@ const EditComponents = ({ editTask,setIseditable }) => {
   };
   const getBoardUse=async()=>{
     try {
-        const res=await axios.get("http://localhost:3000/api/user/getBoardUser",{
+        const res=await axios.get("https://promanagerbakend-2.onrender.com/api/user/getBoardUser",{
             headers: {
           Authorization: `Bearer ${token}`,
         }
@@ -100,7 +100,7 @@ const EditComponents = ({ editTask,setIseditable }) => {
   const editThisTask = async () => {
     try {
       const res = await axios.put(
-        `http://localhost:3000/api/task/editTask/${editTask}`,
+        `https://promanagerbakend-2.onrender.com/api/task/editTask/${editTask}`,
         { task },
         {
           headers: {
@@ -127,7 +127,6 @@ const EditComponents = ({ editTask,setIseditable }) => {
     X
   </i>);
 
-    console.log(task)
   return (
     <div className={styles.superContainer}>
     <ToastContainer
@@ -172,7 +171,7 @@ const EditComponents = ({ editTask,setIseditable }) => {
       </div>
       <div className={styles.assignTo}>
         <p>Assign To</p>
-        <Dropdown boardUser={boardUser} setSelectedEmail={setSelectedEmail} selectedEmail={selectedEmail} />
+        <Dropdown boardUser={boardUser} setSelectedEmail={setSelectedEmail} selectedEmail={selectedEmail} setTask={setTask}/>
       </div>
       <div className={styles.checklist}>
         <div className={styles.fullChecklist}>

@@ -35,7 +35,7 @@ const Register = ({ setLoginstatus }) => {
     }
     e.preventDefault(); // Prevent default form submission
     try {
-      const res = await axios.post("http://localhost:3000/api/user/register", formValues);
+      const res = await axios.post("https://promanagerbakend-2.onrender.com/api/user/register", formValues);
       if (res.status === 201) {
         toast.success(res.data.message);
         setLoginstatus(true);

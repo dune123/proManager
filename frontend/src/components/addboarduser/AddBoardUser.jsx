@@ -13,7 +13,7 @@ const AddBoardUser = ({setAddBoardUser}) => {
 
      const addEmail=async()=>{
         try {
-            const res=await axios.post("http://localhost:3000/api/user/addBoardUser",{email},{
+            const res=await axios.post("https://promanagerbakend-2.onrender.com/api/user/addBoardUser",{email},{
                 headers: {
                 Authorization: `Bearer ${token}`,
                 }
