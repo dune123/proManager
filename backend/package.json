@@ -1,4 +1,6 @@
-{
+{ "scripts": {
+    "start": "nodemon index.js"
+},
   "dependencies": {
     "bcrpyt": "^2.0.0",
     "bcrypt": "^5.1.1",
