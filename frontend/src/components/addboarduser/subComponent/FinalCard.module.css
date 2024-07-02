@@ -1,0 +1,48 @@
+*{
+    margin:0px;
+    padding:0px;
+    font-family: sans-serif;
+}
+
+.superContainer{
+    width:100vw;
+    height:100vh;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 1000;
+    position: absolute;
+    display: flex;
+    top:0px;
+    justify-content: center;
+    align-items: center;
+    position:absolute;
+    left:0px;
+}
+
+.container{
+    height:35vh;
+    width:50vw;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding-top:3vh;
+    padding-left:3vw;
+    gap:3vh;
+}
+
+.container h2{
+    font-size: 1.6rem;
+    font-weight: 400;
+
+}
+
+.container button{
+    width:24vw;
+    height:6vh;
+    background-color: #17A2B8;
+    border: none;
+    border-radius: 0.4rem;
+    color: white;
+    cursor: pointer;
+}
