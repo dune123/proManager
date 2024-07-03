@@ -1,0 +1,61 @@
+*{
+    margin:0px;
+    padding:0px;
+    font-family: sans-serif;
+}
+
+.container{
+    padding-left: 4vw;
+    padding-top: 3.5vh;
+    display: flex;
+    flex-direction: column;
+    gap:3vh;
+}
+
+.container .bottomContainer{
+    display: flex;
+    gap:3vw;
+}
+
+.bottomContainer .leftCont{
+    padding-left: 3vw;
+    padding-top: 3vh;
+    width: 33vw;
+    background-color: #F9FCFF;
+    height:35vh;
+    display: flex;
+    flex-direction: column;
+    gap:5vh;
+    border-radius: 1.2rem;
+}
+
+.leftCont .eachPortion{
+    width:30vw;
+    display: flex;
+    justify-content: space-between;
+}
+
+.eachPortion .lefty{
+    display: flex;
+    align-items: center;
+    gap:1vw;
+}
+
+.bottomContainer .rightCont{
+    padding-left: 4vw;
+    padding-top: 4vh;
+    width: 33vw;
+    background-color: #F9FCFF;
+    height:35vh;
+    display: flex;
+    flex-direction: column;
+    gap:5vh;
+    border-radius: 1.2rem;
+}
+
+.rightCont .eachPortion{
+    width:30vw;
+    display: flex;
+    justify-content: space-between;
+}
+

@@ -1,0 +1,71 @@
+*{
+    margin:0px;
+    padding:0px;
+    font-family: sans-serif;
+}
+
+.superContainer{
+    width:100vw;
+    height:100vh;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 1000;
+    position: absolute;
+    display: flex;
+    top:0px;
+    justify-content: center;
+    align-items: center;
+    position:absolute;
+    left:0px;
+}
+
+.container{
+    height:35vh;
+    width:50vw;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    padding-top:3vh;
+    padding-left:3vw;
+    gap:3vh;
+}
+
+.container h2{
+    margin-top:5vh;
+    font-size: 1.6rem;
+    font-weight: 600;
+}
+
+.container input{
+    width:46vw;
+    height: 7vh;
+    border:1px solid #E2E2E2;
+    border-radius: 0.4rem;
+    font-size: 1.4rem;
+    padding-left: 1.3vw;
+
+}
+
+.buttons{
+    display:flex;
+    width:47.5vw;
+    justify-content: space-between;
+}
+
+.buttons button{
+    width:23vw;
+    height:6vh;
+    cursor: pointer;
+}
+
+.buttons .cancel{
+    border: 1px solid #CF3636;
+    color:#CF3636;
+    border-radius: 0.4rem;
+}
+
+.buttons .addemail{
+    border:none;
+    background-color: #17A2B8;
+    color:white;
+    border-radius: 0.4rem;
+}

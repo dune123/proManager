@@ -1,0 +1,163 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+*{
+    margin:0px;
+    padding:0px;
+    font-family: "Poppins", sans-serif;
+}
+
+.superContainer{
+    width:100vw;
+    height:100vh;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 1000;
+    position: absolute;
+    display: flex;
+    top:0px;
+    justify-content: center;
+    align-items: center;
+    position:absolute;
+    left:0px;
+}
+
+.container{
+    width:45.5vw;
+    height:65vh;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    gap:2vh;
+    padding-top:3vh;
+    padding-left:2vw;
+    padding-right:2vw;
+    border-radius: 0.4rem;
+}
+
+.container .Title{
+    display: flex;
+    flex-direction: column;
+    gap:1vh;
+}
+
+.Title input{
+    height:6vh;
+    border:1px solid #E2E2E2;
+    color: #9B959F;
+    border-radius: 0.4rem;
+    padding-left: 1vw;
+}
+
+.selectPriority{
+    display: flex;
+    gap:1vw;
+}
+
+.selectPriority .rightside{
+    display: flex;
+    align-items: center;
+    gap:2vw;
+    cursor: pointer;
+}
+
+.selectPriority .rightside div{
+    display: flex;
+    align-items: center;
+    color: #767575;
+    border: 1px solid #E2E2E2;
+    padding-top: 0.4vh;
+    padding-left: 0.4vw;
+    padding-right: 0.4vw;
+    padding-bottom: 0.4vh;
+    border-radius: 0.4rem;
+}
+
+.selectPriority .rightside div p{
+    font-size: 0.8rem;
+}
+
+.assignTo{
+    width:41.5vw;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.assignTo p{
+    font-size: 1.1rem;
+}
+
+.checklist{
+    height:28vh ;
+    overflow: scroll;
+    display: flex;
+    flex-direction: column;
+    gap:2vh;
+}
+
+.checklist .fullChecklist{
+    overflow-y: scroll;
+}
+
+.checklist .addChecklist{
+    cursor: pointer;
+}
+
+.checklist .eachChecklist{
+    height:7vh;
+    display: flex;
+    gap:1.5vw;
+    align-items: center;
+    border:1px solid #E2E2E2;
+    padding-left: 1vw;
+    border-radius: 0.4rem;
+    margin-bottom: 1.5vh;
+}
+
+.eachChecklist .description{
+    height:100%;
+    width:33vw;
+    margin-right: 4vw;
+    border: none;
+}
+
+.description:focus{
+    outline: none;
+}
+
+.buttons{
+    width:41.5vw;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.buttons .rightside{
+    display: flex;
+    gap:1vw;
+}
+
+.rightside button{
+    width:7vw;
+    height:5vh;
+    border-radius: 0.4rem;
+    cursor: pointer;
+}
+
+.rightside .cancelBtn{
+    border:1px solid #CF3636;
+    color:#CF3636;
+    background-color: white;
+}
+
+.rightside .saveBtn{
+    border:none;
+    background-color:  #17A2B8;
+    color:white;
+}
+
+.dueDate{
+    width:10vw;
+    height:5vh;
+    border:1px solid #E2E2E2;
+    padding-left: 1.5vw;
+    border-radius: 0.4rem;
+}

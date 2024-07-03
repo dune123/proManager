@@ -1,0 +1,68 @@
+*{
+    margin:0px;
+    padding:0px;
+    font-family: sans-serif;
+}
+
+.container{
+    width:100vw;
+    height:100vh;
+    padding:4vh 3vw;
+}
+
+.container h3{
+    font-size: 1.3rem;
+    font-weight: 600;
+    margin-bottom: 2vh;
+}
+
+.container .subContainer form{
+    display: flex;
+    flex-direction: column;
+    gap:2vh;
+    width: 31vw;
+    margin-bottom: 3vh;
+}
+
+form .name {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+
+.inputField {
+    width: 100%;
+    height: 2.5rem;
+    padding-left: 2.5rem; /* Increased padding to avoid overlap with icon */
+    padding-right: 2.5rem;
+    border: 1px solid #D0D0D0;
+    border-radius: 0.5rem;
+    height: 7vh;
+  }
+
+  .usersLogo, .emailLogo, .lockLogo {
+    position: absolute;
+    left: 1rem;
+    top:1rem;
+    color: #343434;
+  }
+
+  .eyeIcon {
+    right:1rem;
+    top:1rem;
+    left: auto;
+    cursor: pointer;
+    position: absolute;
+  }
+
+  .container button{
+     width:31vw;
+     height:7vh;
+     border-radius: 1.4rem;
+     border: none;
+     background-color: #17A2B8;
+     color: white;
+     cursor: pointer;
+  }
+
+  
