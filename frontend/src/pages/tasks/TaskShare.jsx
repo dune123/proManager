@@ -31,6 +31,12 @@ const TaskShare = () => {
     getTask();
   }, []);
 
+  const formatDate = (isoString) => {
+    const date = new Date(isoString);
+    const options = { day: "numeric", month: "long" };
+    return date.toLocaleDateString("en-US", options);
+  };
+
   const CloseButton = ({ closeToast }) => (
     <i className="material-icons" onClick={closeToast}>
       X
@@ -96,7 +102,7 @@ const TaskShare = () => {
             <div className={styles.bottomCont}>
               <p>Due Date</p>
               <div className={styles.dueDate}>
-                Feb 10th
+                {formatDate(task.dueDate)}
               </div>
             </div>
           </>
