@@ -80,7 +80,7 @@ const Analytics = () => {
                 <GoDotFill style={{color:"#90C4CC"}}/>
                 <p>In Progress Tasks</p>
               </div>
-                <p>{status.Inprogress}</p>
+                <p>{status.Inprogress||0}</p>
               </div>
               <div className={styles.eachPortion}>
               <div className={styles.lefty}>

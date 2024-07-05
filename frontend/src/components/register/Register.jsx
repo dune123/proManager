@@ -40,10 +40,11 @@ const Register = ({ setLoginstatus }) => {
         toast.success(res.data.message);
         setLoginstatus(true);
       } else {
+        
         toast.error(res.data.message);
       }
     } catch (error) {
-      console.error(error);
+      
       if (error.response && error.response.data.field) {
         setErrors({ [error.response.data.field]: error.response.data.message });
       } else {
