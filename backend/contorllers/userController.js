@@ -158,8 +158,6 @@ const addboardUser = async (req, res, next) => {
     const { email } = req.body;
     const currentUser = req.user;
 
-    console.log(email);
-    console.log(currentUser);
 
     const findUser = await User.findById(currentUser);
     if (!findUser) {

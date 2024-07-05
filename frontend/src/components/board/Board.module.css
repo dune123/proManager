@@ -81,6 +81,7 @@
     flex-direction: column;
     gap:3vh;
     overflow-y: auto;
+    padding-bottom: 2vh;
 }
 
 .eachStatusContainer .TopContainer{
